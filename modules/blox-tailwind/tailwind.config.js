@@ -20,6 +20,7 @@ module.exports = {
   ],
   plugins: [
     require('@tailwindcss/typography'),
+    require("@tailwindcss/forms"),
   ],
   safelist: [
     'task-list',   /* As it's added via JS */
