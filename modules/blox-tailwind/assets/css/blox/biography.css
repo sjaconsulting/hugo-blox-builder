@@ -5,13 +5,11 @@
     position: relative;
   }
 
-  /* Custom avatar size on homepage */
+  /* Custom avatar size on homepage - size controlled by template params */
 
   .avatar {
     width: auto;
     height: auto;
-    max-width: 225px;
-    max-height: 225px;
     object-fit: cover;
   }
 
@@ -53,18 +51,18 @@
     font-size: 0.9rem;
   }
 
- /*.ul-edu {*/
- /*   list-style: none;*/
- /* }*/
+ /* .ul-edu { */
+ /*   list-style: none; */
+ /* } */
 
- /* .ul-edu li {*/
- /*   position: relative;*/
- /*   padding: 0 15px 4px 3px;*/
- /* }*/
+ /* .ul-edu li { */
+ /*   position: relative; */
+ /*   padding: 0 15px 4px 3px; */
+ /* } */
 
- /* .ul-edu li .description p {*/
- /*   margin: 0;*/
- /* }*/
+ /* .ul-edu li .description p { */
+ /*   margin: 0; */
+ /* } */
 
   .ul-edu li .description p.course {
     font-size: 0.9rem;
@@ -80,15 +78,15 @@
     font-size: 1.5rem;
   }
 
-  .dark .portrait-title h3 {
-    color: rgb(255 255 255 / 90%);
-    font-weight: bold;
-  }
+  /* .dark .portrait-title h3 { */
+  /*  color: rgb(255 255 255 / 90%); */
+  /*  font-weight: bold; */
+  /* } */
 
-  .dark .portrait-title h2 {
-    color: #fff;
-    font-weight: bold;
-  }
+  /* .dark .portrait-title h2 { */
+  /*  color: #fff; */
+  /*  font-weight: bold; */
+  /* } */
 
   .bio-text {
     max-width: 680px;
@@ -97,8 +95,7 @@
 
 .avatar-wrapper {
   position: relative;
-  width: 150px; /* Match image size in about.avatar widget */
-  height: 150px;
+  /* width and height controlled by template params */
   margin-left: auto;
   margin-right: auto;
 }

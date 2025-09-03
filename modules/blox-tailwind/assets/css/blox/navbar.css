@@ -17,6 +17,15 @@
   @apply max-h-full w-auto inline-block;
 }
 
+/* Ensure interactive controls show hand cursor */
+.theme-toggle,
+[data-search-toggle],
+#search_toggle,
+[data-te-collapse-init],
+.nav-dropdown > .nav-link[role='button'] {
+  @apply cursor-pointer;
+}
+
 /* navbar toggler */
 input#nav-toggle:checked + label #show-button {
   @apply hidden;
@@ -41,31 +50,55 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-link {
-  @apply hover:text-primary-700 dark:hover:text-primary-300 dark:text-white block p-3 font-semibold transition lg:px-2 lg:py-3;
+  @apply dark:text-white block p-3 font-semibold transition lg:px-2 lg:py-3;
+}
+
+.nav-link:hover {
+  color: rgb(var(--color-primary-700));
+}
+
+.dark .nav-link:hover {
+  color: rgb(var(--color-primary-300));
 }
 
 .nav-dropdown {
   @apply mr-0;
+}
 
-  & > svg {
-    @apply pointer-events-none;
-  }
+.nav-dropdown > svg {
+  @apply pointer-events-none;
+}
 
-  &.active {
-    .nav-dropdown-list {
-      @apply block;
-    }
-  }
+.nav-dropdown.active .nav-dropdown-list {
+  @apply block lg:visible lg:opacity-100;
 }
 
 .nav-dropdown-list {
   @apply bg-white dark:bg-slate-900 z-10 min-w-[180px] rounded py-4 shadow hidden lg:invisible lg:absolute lg:block lg:opacity-0;
+  /* Ensure dropdown appears above content and under header */
+  top: 100%;
+  left: 0;
+}
+
+/* Ensure hover opens dropdown in desktop (CSS-driven) */
+@media (min-width: 1024px) {
+  .nav-dropdown:hover > .nav-dropdown-list {
+    @apply visible opacity-100;
+  }
 }
 
 .nav-dropdown-item {
-  @apply px-4  [&:not(:last-child)]:mb-2 dark:hover:bg-primary-500;
+  @apply px-4  [&:not(:last-child)]:mb-2;
+}
+
+.dark .nav-dropdown-item:hover {
+  background-color: rgb(var(--color-primary-500));
 }
 
 .nav-dropdown-link {
-  @apply hover:text-primary-700 dark:text-white  dark:hover:text-white block py-1 font-semibold transition;
+  @apply dark:text-white  dark:hover:text-white block py-1 font-semibold transition;
+}
+
+.nav-dropdown-link:hover {
+  color: rgb(var(--color-primary-700));
 }

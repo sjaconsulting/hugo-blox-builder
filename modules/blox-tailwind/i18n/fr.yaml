@@ -114,6 +114,9 @@
 
 # Experience widget
 
+- id: experience
+  translation: Expériences
+
 - id: present
   translation: Actuellement
 
@@ -262,4 +265,7 @@
 # Published with
 
 - id: published_with
-  translation: Publié avec {hugoblox} — le générateur {repo_link}libre{/repo_link} de site web gratuit permetant aux créateurs de s'épanouir.
+  translation: Publié avec {hugoblox} — le générateur {repo_link}libre{/repo_link} de site web gratuit permettant aux créateurs de s'épanouir.
+
+- id: poweredby_button
+  translation: 'Créer le vôtre →'
